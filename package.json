@@ -1,0 +1,83 @@
+{
+  "name": "op-GPT-mize",
+  "displayName": "op-GPT-mize",
+  "description": "Anonymize and optimize your content for ChatGPT to prevent sharing confidential information ",
+  "version": "1.0.1",
+  "publisher": "VarKap",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "op-GPT-mize.searchAndReplace",
+        "title": "Search and Replace"
+      },
+      {
+        "command": "op-GPT-mize.removeWhitespaces",
+        "title": "Remove whitespaces"
+      },
+
+      {
+        "command": "op-GPT-mize.allOfTheAbove",
+        "title": "Max Optimization(all functions)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "op-GPT-mize.id",
+          "group": "op-GPT-mize@1"
+        }
+      ],
+      "op-GPT-mize.id": [
+        {
+          "command": "op-GPT-mize.searchAndReplace",
+          "group": "op-GPT-mize@1",
+          "order": 4
+        },
+        {
+          "command": "op-GPT-mize.removeWhitespaces",
+          "group": "op-GPT-mize@1",
+          "order": 2
+        },
+
+        {
+          "command": "op-GPT-mize.allOfTheAbove",
+          "group": "op-GPT-mize@1",
+          "order": 1
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "op-GPT-mize.id",
+        "label": "op-GPT-mize"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "dependencies": {
+    "library-name": "github:varkap-var/opt-GPT-mize"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
