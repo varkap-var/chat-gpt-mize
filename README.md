@@ -12,7 +12,7 @@ Anonymize: The "searchAndReplace" command allows the user to search for a specif
 
 Optimize: The "removeWhitespaces" command removes comments, newlines, extra whitespaces and spaces between characters from the selected text, thereby increasing the amoutn of text you can share with ChatGPT in effect.
 
-All Of The Above: Does what it says on the tin 😀
+Max Optimization: Does what it says on the tin 😀
 
 ## Screenshots
 
